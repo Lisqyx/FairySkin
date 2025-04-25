@@ -13,5 +13,9 @@ namespace FairySkin.Controllers
         {
             return View();
         }
+        public ActionResult InventoryOutNew()
+        {
+            return View();
+        }
     }
 }

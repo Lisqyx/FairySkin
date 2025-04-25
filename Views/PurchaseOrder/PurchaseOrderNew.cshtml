@@ -1,0 +1,153 @@
+﻿@{
+    ViewBag.Title = "NewPurchaseOrder";
+}
+
+<link href="~/Content/PurchaseOrder.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+<div class="container-fluid p-0">
+    <div class="d-flex align-items-center mb-3">
+        <h2 class="text-uppercase">Purchase New Order</h2>
+        <button class="btn btn-outline-dark rounded add-btn ms-3">
+            <i class="bi bi-plus"></i> Add New
+        </button>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="mb-3 row">
+                <label for="supplier" class="col-sm-3 col-form-label">Supplier:</label>
+                <div class="col-sm-9">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="supplier">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="mb-3 row">
+                <label for="poDate" class="col-sm-3 col-form-label">P.O. Date:</label>
+                <div class="col-sm-9">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="poDate">
+                        <span class="input-group-text">
+                            <i class="bi bi-calendar"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="mb-3 row">
+                <label for="attention" class="col-sm-3 col-form-label">Attention to:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="attention">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead class="bg-secondary text-white">
+            <tr>
+                <th scope="col">Product Description</th>
+                <th scope="col">Components</th>
+                <th scope="col">Units</th>
+                <th scope="col" style="width:10%;">Quantity</th>
+                <th scope="col">Notes</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PREMIUM TINTED SUNSCREEN 50G</td>
+                <td>Bottle Body</td>
+                <td>Pcs</td>
+                <td>
+                    <input type="text" class="form-control" value="150000">
+                </td>
+                <td>
+                    <input type="text" class="form-control h-100">
+                </td>
+                <td>
+                    <button class="btn btn-link text-danger">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            <tr>
+                <td></td>
+                <td>Cap</td>
+                <td>Pcs</td>
+                <td>
+                    <input type="text" class="form-control" value="150000">
+                </td>
+                <td>
+                    <input type="text" class="form-control h-100">
+                </td>
+                <td>
+                    <button class="btn btn-link text-danger">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Nozzle</td>
+                <td>Pcs</td>
+                <td>
+                    <input type="text" class="form-control" value="150000">
+                </td>
+                <td>
+                    <input type="text" class="form-control h-100">
+                </td>
+                <td>
+                    <button class="btn btn-link text-danger">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Mini White Sticker</td>
+                <td>Pcs</td>
+                <td>
+                    <input type="text" class="form-control" value="150000">
+                </td>
+                <td>
+                    <input type="text" class="form-control h-100">
+                </td>
+                <td>
+                    <button class="btn btn-link text-danger">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Paper Box</td>
+                <td>Pcs</td>
+                <td>
+                    <input type="text" class="form-control" value="150000">
+                </td>
+                <td>
+                    <input type="text" class="form-control h-100">
+                </td>
+                <td>
+                    <button class="btn btn-link text-danger">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+        
+    <div class="row mt-4" style="margin-right:150px;">
+        <div class="col-12 text-end">
+            <button class="btn btn-success px-4 me-2">Save</button>
+            <button class="btn btn-danger px-4">Cancel</button>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,35 @@
-﻿
+﻿.table {
+    border: 1px solid #dee2e6;
+    width:90%;
+}
+
+    .table thead th {
+        background-color: #6c757d;
+        color: black;
+        border-bottom: 0;
+    }
+
+    .table tbody td {
+        vertical-align: middle;
+    }
+
+.icon-link {
+    color: #6c757d; /* Bootstrap's gray color */
+    margin-left: 12px;
+    font-size: 1.0rem;
+    transition: color 0.2s;
+}
+
+    .icon-link:hover {
+        color: #495057; /* Darker gray on hover */
+        text-decoration: none;
+    }
+
+.action-column {
+    width: 150px;
+    text-align: right;
+}
+
+span{
+    color:black;
+}

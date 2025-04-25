@@ -3,5 +3,55 @@
     ViewBag.Title = "InventoryIn";
 }
 
-<h2>Inventory In</h2>
+<link href="~/Content/InventoryIn.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
+<div class="d-flex align-items-center mb-3">
+    <h2 class="text-uppercase">INVENTORY IN</h2>
+    <button class="btn btn-outline-dark rounded add-btn ms-3" onclick="location.href='@Url.Action("InventoryInNew","InventoryIn")'">
+        <i class="bi bi-plus-circle"></i> Add New
+    </button>
+</div>
+
+<table class="table">
+    <thead class="bg-secondary text-white">
+        <tr>
+            <th scope="col">DR#</th>
+            <th scope="col">DR Date</th>
+            <th scope="col">Supplier</th>
+            <th scope="col">Reference no.</th>
+            <th scope="col">Notes</th>
+            <th scope="col">Created By</th>
+            <th scope="col">Date Created</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>DR 1001</td>
+            <td>04-01-2025</td>
+            <td>SUPPLIER ABC</td>
+            <td>5001</td>
+            <td></td>
+            <td>mylene</td>
+            <td>04-01-2025 01:00PM</td>
+            <td>
+                <a href="#" class="icon-link"><i class="bi bi-pencil-square"></i></a>
+                <a href="#" class="icon-link"><i class="bi bi-trash"></i></a>
+            </td>
+        </tr>
+        <tr>
+            <td>DR 1002</td>
+            <td>04-02-2025</td>
+            <td>SUPPLIER ABC</td>
+            <td>5002</td>
+            <td></td>
+            <td>mylene</td>
+            <td>04-01-2025 01:00PM</td>
+            <td>
+                <a href="#" class="icon-link"><i class="bi bi-pencil-square"></i></a>
+                <a href="#" class="icon-link"><i class="bi bi-trash"></i></a>
+            </td>
+        </tr>
+    </tbody>
+</table>

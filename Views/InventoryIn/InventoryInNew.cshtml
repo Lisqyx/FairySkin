@@ -1,0 +1,253 @@
+﻿@{
+    ViewBag.Title = "InventoryInNew";
+}
+<link href="~/Content/InventoryIn.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+<!-- SELECT ITEMS MODAL -->
+<div class="modal fade" id="selectItemsModal" tabindex="-1" aria-labelledby="selectItemsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="selectItemsModalLabel">SELECT ITEMS</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <div class="text-end mb-2">
+                        <small>All Products, Group Only, Individual Only</small>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" placeholder="Search item">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Group Only
+                                </button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="filterDropdown">
+                                    <li><a class="dropdown-item" href="#">All Products</a></li>
+                                    <li><a class="dropdown-item" href="#">Group Only</a></li>
+                                    <li><a class="dropdown-item" href="#">Individual Only</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="bg-secondary text-white">
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DERMA FACIAL KIT</td>
+                                <td href="#" class="text-white text-decoration-none">select</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex align-items-center mb-3">
+    <h2 class="text-uppercase">NEW INVENTORY IN</h2>
+    <button class="btn btn-outline-dark rounded add-btn ms-3" data-bs-toggle="modal" data-bs-target="#selectItemsModal">
+        <i class="bi bi-plus-circle"></i> Add New Item
+    </button>
+</div>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <div class="mb-3 row">
+            <label for="supplier" class="col-sm-3 col-form-label">Supplier:</label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="supplier">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="mb-3 row">
+            <label for="dateReceived" class="col-sm-3 col-form-label">Date Received:</label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="dateReceived" placeholder="mm/dd/yyyy">
+                    <span class="input-group-text">
+                        <i class="bi bi-calendar"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="mb-3 row">
+            <label for="notes" class="col-sm-3 col-form-label">Notes:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="notes">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="mb-3 row">
+            <label for="referenceNo" class="col-sm-3 col-form-label">Reference no.:</label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="referenceNo">
+                    <span class="input-group-text">
+                        <i class="bi bi-calendar"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Product Tables Section -->
+<div class="table-responsive mb-4">
+    <table class="table table-bordered">
+        <thead class="bg-light">
+            <tr>
+                <th colspan="7" class="bg-secondary text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>DERMA FACIAL TONER 60ML</span>
+                        <div>
+                            <button class="btn btn-sm btn-outline-light me-2">
+                                <i class="bi bi-plus"></i> Add batch code
+                            </button>
+                            <button class="btn btn-sm btn-outline-light">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>Batch code</th>
+                <th>Expiration date</th>
+                <th>Unit</th>
+                <th>Packaging</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Box ID</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="table-responsive mb-4">
+    <table class="table table-bordered">
+        <thead class="bg-light">
+            <tr>
+                <th colspan="7" class="bg-secondary text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>DERMA FACIAL TONER 60ML - RETENTION</span>
+                        <div>
+                            <button class="btn btn-sm btn-outline-light me-2">
+                                <i class="bi bi-plus"></i> Add batch code
+                            </button>
+                            <button class="btn btn-sm btn-outline-light">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>Batch code</th>
+                <th>Expiration date</th>
+                <th>Unit</th>
+                <th>Packaging</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Box ID</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="table-responsive mb-4">
+    <table class="table table-bordered">
+        <thead class="bg-light">
+            <tr>
+                <th colspan="7" class="bg-secondary text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>DERMA BRIGHTENING CREAM 10G</span>
+                        <div>
+                            <button class="btn btn-sm btn-outline-light me-2">
+                                <i class="bi bi-plus"></i> Add batch code
+                            </button>
+                            <button class="btn btn-sm btn-outline-light">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>Batch code</th>
+                <th>Expiration date</th>
+                <th>Unit</th>
+                <th>Packaging</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Box ID</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="table-responsive mb-4">
+    <table class="table table-bordered">
+        <thead class="bg-light">
+            <tr>
+                <th colspan="7" class="bg-secondary text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>DERMA BRIGHTENING CREAM 10G - RETENTION</span>
+                        <div>
+                            <button class="btn btn-sm btn-outline-light me-2">
+                                <i class="bi bi-plus"></i> Add batch code
+                            </button>
+                            <button class="btn btn-sm btn-outline-light">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>Batch code</th>
+                <th>Expiration date</th>
+                <th>Unit</th>
+                <th>Packaging</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Box ID</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="d-flex justify-content-end mt-3" style="margin-right:130px;">
+    <button class="btn btn-success me-2">Save</button>
+    <button class="btn btn-danger">Cancel</button>
+</div>

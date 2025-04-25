@@ -6,14 +6,14 @@ using System.Web.Mvc;
 
 namespace FairySkin.Controllers
 {
-    public class PurchaseOrderController : Controller
+    public class TransferInController : Controller
     {
-        // GET: PurchaseOrder
-        public ActionResult PurchaseOrder()
+        // GET: TransferIn
+        public ActionResult TransferIn()
         {
             return View();
         }
-        public ActionResult PurchaseOrderNew()
+        public ActionResult TransferInNew()
         {
             return View();
         }

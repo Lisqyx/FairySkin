@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="sidenav">
-        <a style="font-weight:bold;">General Settings</a>
+        <a class="MenuTitle" style="font-weight: bold; font-size: 16px;">General Settings</a>
         <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("UserManagement","UserManagement")'">User Management</a>
         <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("Branches","Branches")'" )">Branches</a>
         <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("Location","Location")'">Location</a>
@@ -25,10 +25,16 @@
         <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("Products","Products")'">Products</a>
         <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("Suppliers","Suppliers")'">Suppliers</a>
 
-        <a style="font-weight:bold;">Main Menu</a>
+        <a class="MenuTitle" style="font-weight: bold; font-size: 16px;">Main Menu</a>
         <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("PurchaseOrder","PurchaseOrder")'">Purchase Order</a>
         <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryIn","InventoryIn")'">Inventory In</a>
         <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryOut","InventoryOut")'">Inventory Out</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("TransferIn","TransferIn")'">Transfer In</a>
+
+        <a class="MenuTitle" style="font-weight:bold; font-size:16px;">Report Central</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryOutReport","InventoryOutReport")'">Inventory Out Report</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryInReport","InventoryInReport")'">Inventory In Report</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryReport","InventoryReport")'">Inventory Report per Location</a>
     </div>
     <div class="container body-content" style="margin-left:250px; margin-top:50px;">
         @RenderBody()
@@ -79,13 +85,16 @@
 
         /* The navigation menu links */
         .sidenav a {
-            padding: 0px 8px 8px 16px;
+            padding: 0px 8px 2px 16px;
             text-decoration: none;
             font-size: 13px;
             color:black;
             display: block;
             font-weight:400;
             font-family:'Sans Serif Collection'
+        }
+        .sidenavitem{
+            margin-bottom:8px;
         }
         .sidenavitem:hover{
             color:white;

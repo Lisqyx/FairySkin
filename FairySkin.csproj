@@ -113,12 +113,16 @@
     <Compile Include="Controllers\BranchesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\InventoryInController.cs" />
+    <Compile Include="Controllers\InventoryInReportController.cs" />
     <Compile Include="Controllers\InventoryOutController.cs" />
+    <Compile Include="Controllers\InventoryOutReportController.cs" />
+    <Compile Include="Controllers\InventoryReportController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\ProductGroupController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\PurchaseOrderController.cs" />
     <Compile Include="Controllers\SuppliersController.cs" />
+    <Compile Include="Controllers\TransferInController.cs" />
     <Compile Include="Controllers\UserManagementController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -145,7 +149,11 @@
     <Content Include="Content\Branches.css" />
     <Content Include="Content\Customers.css" />
     <Content Include="Content\InventoryIn.css" />
+    <Content Include="Content\InventoryInReport.css" />
     <Content Include="Content\InventoryOut.css" />
+    <Content Include="Content\InventoryOutReport.css" />
+    <Content Include="Content\InventoryReport.css" />
+    <Content Include="Content\layout.css" />
     <Content Include="Content\Location.css" />
     <Content Include="Content\ProductGroup.css" />
     <Content Include="Content\Products.css" />
@@ -189,15 +197,25 @@
     <Content Include="Views\ProductGroup\ProductGroup.cshtml" />
     <Content Include="Views\Products\Products.cshtml" />
     <Content Include="Views\PurchaseOrder\PurchaseOrder.cshtml" />
-    <Content Include="Views\PurchaseOrder\NewPurchaseOrder.cshtml" />
     <Content Include="Views\Suppliers\Suppliers.cshtml" />
     <Content Include="Views\Location\Location.cshtml" />
     <Content Include="Views\InventoryIn\InventoryIn.cshtml" />
     <Content Include="Views\InventoryOut\InventoryOut.cshtml" />
+    <Content Include="Views\InventoryInReport\InventoryInReport.cshtml" />
+    <Content Include="Views\InventoryInReport\InventoryInReportNew.cshtml" />
+    <Content Include="Views\InventoryReport\InventoryReport.cshtml" />
+    <Content Include="Views\InventoryOutReport\InventoryOutReport.cshtml" />
+    <Content Include="Views\InventoryOutReport\InventoryOutReportNew.cshtml" />
+    <Content Include="Views\PurchaseOrder\PurchaseOrderNew.cshtml" />
+    <Content Include="Views\InventoryIn\InventoryInNew.cshtml" />
+    <Content Include="Views\InventoryOut\InventoryOutNew.cshtml" />
+    <Content Include="Views\TransferIn\TransferIn.cshtml" />
+    <Content Include="Views\TransferIn\TransferInNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\StockReconciliation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
