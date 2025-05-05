@@ -1,6 +1,5 @@
 ﻿.table {
     margin-top: 20px;
-    width: 90%;
     border: 1px solid #dee2e6;
     table-layout: fixed;
 }
@@ -17,4 +16,8 @@
 
     span{
         color:black;
+    }
+
+    .icon-link{
+        color:gray;
     }

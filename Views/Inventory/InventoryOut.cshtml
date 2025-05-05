@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "InventoryOut";
+}
+<link href="@Url.Content("~/Content/InventoryOut.css")" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+<div class="d-flex align-items-center mb-3">
+    <h2 class="text-uppercase">INVENTORY OUT</h2>
+    <button class="btn btn-outline-dark rounded add-btn ms-3" onclick="location.href='@Url.Action("InventoryOutNew","Inventory")'">
+        <i class="bi bi-plus-circle"></i> Add New
+    </button>
+</div>
+
+<div class="row search-section">
+    <div class="col-md-2">
+        <div class="date-input">
+            <input type="text" class="form-control" id="drDateFrom" placeholder="DR Date From">
+            <i class="bi bi-calendar"></i>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="date-input">
+            <input type="text" class="form-control" id="drDateTo" placeholder="DR Date To">
+            <i class="bi bi-calendar"></i>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <input type="text" class="form-control" id="customerName" placeholder="Customer Name">
+    </div>
+    <div class="col-md-3">
+        <input type="text" class="form-control" id="invoiceNo" placeholder="Invoice no">
+    </div>
+    <div class="col-md-2">
+        <button class="btn search-btn w-100" id="searchBtn">
+            <i class="bi bi-search"></i> Search
+        </button>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="table-header">
+            <tr>
+                <th>DR#</th>
+                <th>DR Date</th>
+                <th>Customer Name</th>
+                <th>Invoice No.</th>
+                <th>Total No. of Pcs</th>
+                <th>No. of pcs from Invoice</th>
+                <th>Created By</th>
+                <th>Date Created</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>DR 1001</td>
+                <td>04-01-2025</td>
+                <td>Customer ABC</td>
+                <td>5001</td>
+                <td>100</td>
+                <td>200</td>
+                <td>mylene</td>
+                <td>04-01-2025 01:00PM</td>
+                <td class="text-center">
+                    <i class="bi bi-printer action-icon"></i>
+                    <i class="bi bi-pencil-square action-icon"></i>
+                    <i class="bi bi-trash action-icon"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>DR 1002</td>
+                <td>04-02-2025</td>
+                <td>Customer ABC</td>
+                <td>5001</td>
+                <td>100</td>
+                <td>200</td>
+                <td>mylene</td>
+                <td>04-01-2025 01:00PM</td>
+                <td class="text-center">
+                    <i class="bi bi-printer action-icon"></i>
+                    <i class="bi bi-pencil-square action-icon"></i>
+                    <i class="bi bi-trash action-icon"></i>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6"></td>
+                <td colspan="3" class="text-end">200</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

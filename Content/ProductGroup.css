@@ -1,6 +1,5 @@
 ﻿.table {
     margin-top: 20px;
-    width: 90%;
     border: 1px solid #dee2e6;
     table-layout: fixed;
 }
@@ -29,7 +28,6 @@
 
     .icon-link i {
         font-size: 15px;
-        ;
     }
 
     .icon-link:hover {

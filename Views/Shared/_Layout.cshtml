@@ -27,16 +27,22 @@
 
         <a class="MenuTitle" style="font-weight: bold; font-size: 16px;">Main Menu</a>
         <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("PurchaseOrder","PurchaseOrder")'">Purchase Order</a>
-        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryIn","InventoryIn")'">Inventory In</a>
-        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryOut","InventoryOut")'">Inventory Out</a>
-        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("TransferIn","TransferIn")'">Transfer In</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryIn","Inventory")'">Inventory In</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryOut","Inventory")'">Inventory Out</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("TransferIn","TransferIn")'">Branch Transfer</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("StockAdjustment","Stocks")'">Stock Adjustment</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("StockReconciliation","Stocks")'">Stock Reconciliation</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("StockReturn","Stocks")'">Stock Return</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("StockReplacement","Stocks")'">Stock Replacement</a>
 
         <a class="MenuTitle" style="font-weight:bold; font-size:16px;">Report Central</a>
-        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryOutReport","InventoryOutReport")'">Inventory Out Report</a>
-        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryInReport","InventoryInReport")'">Inventory In Report</a>
-        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryReport","InventoryReport")'">Inventory Report per Location</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryOutReport","Inventory")'">Inventory Out Report</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryInReport","Inventory")'">Inventory In Report</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryReportPerLocation","Inventory")'">Inventory Report per Location</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("InventoryReportSummary","Inventory")'">Inventory Report Summary</a>
+        <a class="sidenavitem" type="button" onclick="location.href='@Url.Action("DefectiveStocksReport","Stocks")'">Defective Stocks Report</a>
     </div>
-    <div class="container body-content" style="margin-left:250px; margin-top:50px;">
+    <div class="container body-content" style="margin-left:200px; margin-top:50px;">
         @RenderBody()
         <footer>
             <p>&copy; @DateTime.Now.Year - Fairy Skin</p>
@@ -74,27 +80,27 @@
     .sidenav {
         text-align:left;
         height: 100%; /* 100% Full-height */
-        width: 15%;
+        width: 12%;
         position: fixed; /* Stay in place */
         top: 0; /* Stay at the top */
         background-color: #e2b6b6;
         overflow-x: hidden; /* Disable horizontal scroll */
         padding-top: 60px; /* Place content 60px from the top */
-        margin-top:40px;
+        margin-top:20px;
     }
 
         /* The navigation menu links */
         .sidenav a {
-            padding: 0px 8px 2px 16px;
+            padding: 0px 0px 2px 16px;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 12px;
             color:black;
             display: block;
-            font-weight:400;
+            font-weight:500;
             font-family:'Sans Serif Collection'
         }
         .sidenavitem{
-            margin-bottom:8px;
+            margin-bottom:4px;
         }
         .sidenavitem:hover{
             color:white;
