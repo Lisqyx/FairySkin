@@ -41,5 +41,13 @@ namespace FairySkin.Controllers
         {
             return View();
         }
+        public ActionResult BranchTransfer()
+        {
+            return View();
+        }
+        public ActionResult BranchTransferNew()
+        {
+            return View(); 
+        }
     }
 }

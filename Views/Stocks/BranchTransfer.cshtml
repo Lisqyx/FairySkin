@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "Branch Transfer";
+}
+<link href="@Url.Content("~/Content/BranchTransfer.css")" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+<div class="container-fluid">
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <h2>STOCK TRANSFER</h2>
+        </div>
+        <div class="col-md-6 text-end">
+            <button class="btn btn-outline-dark rounded add-btn ms-3" onclick="location.href='@Url.Action("BranchTransferNew","Stocks")'">Add New</button>
+</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <input type="text" class="form-control" id="dateFrom" placeholder="Date From">
+        </div>
+        <div class="col-md-2">
+            <input type="text" class="form-control" id="dateTo" placeholder="Date To">
+        </div>
+        <div class="col-md-2">
+            <select class="form-control" id="branchFilter">
+                <option value="">All Branches</option>
+                <option value="accounting">Accounting Office</option>
+                <option value="tiktok">Tiktok Shop</option>
+                <option value="shopee">Shopee Store</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <select class="form-control" id="transferTypeFilter">
+                <option value="">All Type of Transfer</option>
+                <option value="in">Transfer In</option>
+                <option value="out">Transfer Out</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <select class="form-control" id="statusFilter">
+                <option value="">All Status</option>
+                <option value="received">Received</option>
+                <option value="toreceive">To Receive</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped table-custom">
+                    <thead>
+                        <tr>
+                            <th>Transmittal#</th>
+                            <th>Date</th>
+                            <th>Branch</th>
+                            <th>Type of Transfer</th>
+                            <th>Notes</th>
+                            <th>Status</th>
+                            <th>Created By</th>
+                            <th>Date Created</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>T1001</td>
+                            <td>04-01-2025</td>
+                            <td>Accounting Office</td>
+                            <td>Transfer Out</td>
+                            <td></td>
+                            <td>Received</td>
+                            <td>mylene</td>
+                            <td>04-01-2025 01:00PM</td>
+                            <td class="text-center">
+                                <i class="bi bi-printer action-icon"></i>
+                                <i class="bi bi-pencil-square action-icon"></i>
+                                <i class="bi bi-trash action-icon"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>T1002</td>
+                            <td>04-02-2025</td>
+                            <td>Tiktok Shop</td>
+                            <td>Transfer Out</td>
+                            <td></td>
+                            <td>Received</td>
+                            <td>mylene</td>
+                            <td>04-01-2025 01:00PM</td>
+                            <td class="text-center">
+                                <i class="bi bi-printer action-icon"></i>
+                                <i class="bi bi-pencil-square action-icon"></i>
+                                <i class="bi bi-trash action-icon"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>T1003</td>
+                            <td>04-02-2025</td>
+                            <td>Shopee Store</td>
+                            <td>Transfer Out</td>
+                            <td></td>
+                            <td>To Receive</td>
+                            <td>mylene</td>
+                            <td>04-01-2025 01:00PM</td>
+                            <td class="text-center">
+                                <i class="bi bi-printer action-icon"></i>
+                                <i class="bi bi-pencil-square action-icon"></i>
+                                <i class="bi bi-trash action-icon"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>T1004</td>
+                            <td>04-02-2025</td>
+                            <td>Accounting Office</td>
+                            <td>Transfer In</td>
+                            <td>leaking</td>
+                            <td>To Receive</td>
+                            <td>mylene</td>
+                            <td>04-01-2025 01:00PM</td>
+                            <td class="text-center">
+                                <i class="bi bi-printer action-icon"></i>
+                                <i class="bi bi-pencil-square action-icon"></i>
+                                <i class="bi bi-trash action-icon"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

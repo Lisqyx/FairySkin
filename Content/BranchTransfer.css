@@ -1,0 +1,18 @@
+﻿.table-custom {
+    border-collapse: collapse;
+}
+
+    .table-custom td {
+        border-left: none;
+        border-right: none;
+    }
+
+    .table-custom thead th {
+        background-color: #6c757e !important;
+        border-left: none;
+        border-right: none;
+    }
+
+    .table-custom tbody tr {
+        border-bottom: 1px solid #dee2e6;
+    }
