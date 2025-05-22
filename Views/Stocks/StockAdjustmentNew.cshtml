@@ -3,5 +3,166 @@
     ViewBag.Title = "StockAdjustmentNew";
 }
 
-<h2>StockAdjustmentNew</h2>
+<link href="~/Content/StockAdjustmentNew.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
+<div class="container-fluid">
+    <h4 class="mb-4">STOCK ADJUSTMENT</h4>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-2">Notes:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group row">
+                <label class="col-sm-2">Date:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12 text-right">
+            <button class="btn btn-outline-dark" id="selectProductBtn">
+                <span class="mr-1">⊕</span> Select Product
+            </button>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Batch code</th>
+                    <th>Quantity</th>
+                    <th>Reason for Adjustment</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                <!-- Product rows will be added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12 text-right">
+            <button class="btn btn-success mr-2">Save</button>
+            <button class="btn btn-danger">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- Select Items Modal -->
+<div class="modal fade" id="selectItemsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">SELECT ITEMS</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" placeholder="Search product">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <select class="form-control">
+                                <option>All Products</option>
+                            </select>
+                            <div class="input-group-append">
+                                <button class="btn pinkbutton">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Product Description</th>
+                                <th>Stocks</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Derma Facial Kit</td>
+                                <td></td>
+                                <td><a href="#" class="select-link" data-item="Derma Facial Kit">select</a></td>
+                            </tr>
+                            <tr>
+                                <td>Premium Tinted Sunscreen 50g</td>
+                                <td>18,503</td>
+                                <td><a href="#" class="select-link" data-item="Premium Tinted Sunscreen 50g">select</a></td>
+                            </tr>
+                            <tr>
+                                <td>Derma Facial Toner 60ml</td>
+                                <td>6,248</td>
+                                <td><a href="#" class="select-link" data-item="Derma Facial Toner 60ml">select</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Open select items modal
+        $('#selectProductBtn').click(function () {
+            $('#selectItemsModal').modal('show');
+        });
+
+        // Handle selecting an item
+        $(document).on('click', '.select-link', function (e) {
+            e.preventDefault();
+            const selectedItem = $(this).data('item');
+
+            // Add the selected item to the table
+            addProductToTable(selectedItem);
+
+            // Close the modal
+            $('#selectItemsModal').modal('hide');
+        });
+
+        function addProductToTable(productName) {
+            const batchCode = "FRT241103";
+            const newRow = `
+                    <tr>
+                        <td>${productName}</td>
+                        <td>${batchCode}</td>
+                        <td><input type="number" class="form-control" value="1"></td>
+                        <td>
+                            <select class="form-control reason-dropdown">
+                                <option>Leaking</option>
+                                <option>Damaged</option>
+                                <option>Expired</option>
+                                <option>Other</option>
+                            </select>
+                        </td>
+                        <td><input type="text" class="form-control"></td>
+                    </tr>
+                `;
+
+            $('#productTableBody').append(newRow);
+        }
+    });
+</script>

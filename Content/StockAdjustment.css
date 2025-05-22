@@ -1,0 +1,76 @@
+﻿.search-section {
+    margin-bottom: 20px;
+}
+
+.search-btn {
+    background-color: #eda6a6;
+    color: white;
+}
+
+.table-header {
+    background-color: #6c757d;
+    color: white;
+}
+
+.add-new-btn {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-icon {
+    cursor: pointer;
+    margin: 0 3px;
+}
+
+.date-input {
+    position: relative;
+}
+
+    .date-input i {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Remove borders between columns but keep horizontal lines */
+.table td, .table th {
+    border-left: none;
+    border-right: none;
+}
+
+.table thead th {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #dee2e6;
+}
+
+    /* Add subtle hover effect */
+    .table tbody tr:hover {
+        background-color: rgba(0,0,0,0.02);
+    }

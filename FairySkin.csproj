@@ -158,6 +158,13 @@
     <Content Include="Content\ProductGroup.css" />
     <Content Include="Content\Products.css" />
     <Content Include="Content\PurchaseOrder.css" />
+    <Content Include="Content\StockAdjustment.css" />
+    <Content Include="Content\StockAdjustmentNew.css" />
+    <Content Include="Content\StockReconciliation.css" />
+    <Content Include="Content\StockReplacement.css" />
+    <Content Include="Content\StockReplacementNew.css" />
+    <Content Include="Content\StockReturn.css" />
+    <Content Include="Content\StockReturnNew.css" />
     <Content Include="Content\Suppliers.css" />
     <Content Include="Content\UserManagement.css" />
     <Content Include="favicon.ico" />

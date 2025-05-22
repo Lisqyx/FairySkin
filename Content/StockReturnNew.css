@@ -1,0 +1,35 @@
+﻿body {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.modal-header {
+    background-color: #d9a5a5;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.select-dr-item, .select-product {
+    color: blue;
+    text-decoration: none;
+}
+
+    .select-dr-item:hover, .select-product:hover {
+        text-decoration: underline;
+    }
+
+table thead th {
+    background-color: #6c757d;
+    color: white;
+}

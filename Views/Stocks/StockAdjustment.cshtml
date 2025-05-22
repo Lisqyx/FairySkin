@@ -1,7 +1,59 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "StockAdjustment";
 }
+<link href="@Url.Content("~/Content/StockAdjustment.css")" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
-<h2>StockAdjustment</h2>
+<div class="d-flex align-items-center mb-3">
+    <h2>STOCK ADJUSTMENT</h2>
+    <button class="btn btn-outline-dark rounded add-btn ms-auto" onclick="location.href='@Url.Action("StockAdjustmentNew","Stocks")'">
+        <i class="bi bi-plus-circle"></i> Add New
+    </button>
+</div>
 
+<div class="row search-section">
+    <div class="col-md-2">
+        <div class="date-input">
+            <input type="text" class="form-control" id="dateFrom" placeholder="Date From">
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="date-input">
+            <input type="text" class="form-control" id="dateTo" placeholder="Date To">
+        </div>
+    </div>
+    <div class="col-md-2">
+        <button class="btn search-btn" id="searchBtn">
+            <i class="bi bi-search"></i> Search
+        </button>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="table-header">
+            <tr>
+                <th>AdjustmentID</th>
+                <th>Date</th>
+                <th>Notes</th>
+                <th>Created By</th>
+                <th>Date Created</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>04-20-2025</td>
+                <td>Findings on QC date April 15, 2025</td>
+                <td>mylene</td>
+                <td>04-01-2025 01:00PM</td>
+                <td class="text-center">
+                    <i class="bi bi-printer action-icon"></i>
+                    <i class="bi bi-pencil-square action-icon"></i>
+                    <i class="bi bi-trash action-icon"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

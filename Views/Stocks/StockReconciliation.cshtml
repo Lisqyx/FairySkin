@@ -1,7 +1,221 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "StockReconciliation";
 }
+<link href="@Url.Content("~/Content/StockReconciliation.css")" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
-<h2>StockReconciliation</h2>
+<div class="d-flex align-items-center mb-3">
+    <h2 class="text-uppercase">STOCK RECONCILIATION</h2>
+</div>
+<div class="row mb-3">
+    <div class="col-md-2">
+        <select class="form-select" id="typeFilter">
+            <option selected>--SELECT TYPE--</option>
+            <!--I dont know what to put here-->
+        </select>
+    </div>
+    <div class="col-md-4">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search product" id="searchInput">
+            <button class="btn text-white" style="background-color: #eda6a6;" type="button" id="searchBtn">
+                <i class="bi bi-search"></i> Search
+            </button>
+        </div>
+    </div>
+</div>
 
+<table class="table">
+    <thead class="bg-secondary text-white">
+        <tr>
+            <th scope="col">ProductID</th>
+            <th scope="col">Description</th>
+            <th scope="col">Remaining stock</th>
+            <th scope="col">Actual Stock</th>
+            <th scope="col">Difference</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Premium Exfoliating Toner 60ml</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Premium Brightening Facial Foam 60ml</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Premium Brightening Serum 20ml</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Premium Brightening Sunscreen 10g</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Premium Set Box</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Premium Blister Tray</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Derma Soap</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Derma Facial Toner 60ml</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Derma Brightening Cream 10g</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Derma Sunscreen Gel Cream 15g</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Derma Set Box</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Derma Blister Tray</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Glow Booster Cleansing Gel 50ml</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Water Essence Toner 60ml</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Glow Booster Serum 15ml</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Sunscreen Gel Cream 10g</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Mild Set Box</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Mild Blister Tray</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Premium Tinted Sunscreen</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Premium Tinted Box</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Premium Brightening Sunscreen 50g</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Premium Brightening Facial Foam 100ml</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>Premium Duo Set Box</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>Premium Duo Blister Tray</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>Water Essence Toner 60ml</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>Glow Booster Serum 15ml</td>
+            <td>1000</td>
+            <td><input type="number" class="form-control" value="500"></td>
+            <td>500</td>
+        </tr>
+    </tbody>
+</table>
